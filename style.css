@@ -1,0 +1,58 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: rgb(42, 49, 50);
+  font-size: 4vmin;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+#calculator {
+  width: min(1000px, 70vw);
+  height: min(1000px, 70vh);
+  display: grid;
+  grid-template: "s   s   s" auto
+                 ".   .   ." 1fr 
+                 ".   .   ." 1fr 
+                 ".   .   ." 1fr 
+                 ".   .   ." 1fr /
+                 1fr 1fr 1fr;
+  grid-gap: 0.5em;
+  padding: 0.75em;
+  border-radius: 0.5em;
+  background: rgb(7, 87, 91);
+  filter: drop-shadow(1.5vmin 1.5vmin 1.5vmin rgb(0, 59, 70))
+}
+
+#screen {
+  text-align: right;
+  overflow-x: scroll;
+  grid-area: s;
+  font-size: 4em;
+  background: white;
+  padding: 0.05em 0.15em 0.05em 0.15em;
+}
+
+button {
+  background: rgb(196, 223, 230);
+  font-size: 2em;
+  color: black;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background: rgb(160, 205, 216);
+}
+
+// colour scheme 1: rgb(42, 49, 50), rgb(51, 107, 135), rgb(144, 175, 197), rgb(104, 141, 168)
+// 0, 59, 70
+// cucumber mint: silver (193, 202, 209), (3, 58, 61)
